@@ -1,64 +1,108 @@
 body {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 20px;
-    background-color: rgb(226, 226, 226);
     margin: 0px;
-    color: rgb(18, 18, 18);
-}
-#container {
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 30% 70%;
+    color: #4d4e53;;
 }
 #navbar {
-    display: grid;
-    float: left;
-    max-width: 100%;
-    border: 1px solid gray;
-    height: 100vh;
-    overflow-y: scroll;
+    position: fixed;
+    border-right: 3px solid gray;
+    height: 100%;
+    width: 300px;
+    min-width: 290px;
+}
+#navbar header {
+    padding: 20px 15px 20px 25px;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    color:rgb(0, 0, 0)
+}
+#scroll-area {
+    height: 87%;
+    overflow: auto;
+
 }
 #nav-container {
     display: flex;
-    height: 40px;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(31, 31, 31, 0.824);
 }
-#nav-container header {
-    display: flex;
-    height: 40px;
-    padding-left: 10px;
-    align-items: center;
-    font-size: 27;
-    font-weight: 700;
-    border-bottom: 1px solid black;
-}
-
 #nav-link {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
-    color:rgb(18, 18, 18);
+    color:#4d4e53;;
     width: 100%;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 45px;
+    padding-left: 25px;
+    padding-right: 35px;
 }
 
 #main-doc {
-    display: grid;
+    width: auto;
     height: auto;
-    height: 100vh;
-    overflow-y: scroll;
-    padding: 20px;
+    margin-left: 310px;
+    padding: 30px;
 }
-
 .main-section {
     width: 100%;
-    display: block;
+    margin-bottom: 20px;
 }
 .main-section header {
+    padding-top: 5px;
     font-size: 28px;
     font-weight: 400;
+    color:rgb(0, 0, 0)
+}
+p {
+    font-size: 15px;
+    padding: 8px 5px 0px 15px;
+    line-height: 1.5;
+}
+li {
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 5px;
+    margin-left: 40px;
+}
+#code-block {
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin-left: 35px;
+}
+code {
+    font-size: 13px;
+    font-family: monospace;
+}
+
+@media (max-width: 830px) {
+    #navbar {
+        display: block;
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        margin: 0px;
+    }
+    #navbar header {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        color:rgb(0, 0, 0)
+    }
+    #scroll-area {
+        max-height: 80%;
+        overflow: auto;
+        border: 2px solid rgb(89, 89, 89);
+    }
+    #main-doc {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        padding: 25px;
+        margin: 0px;
+        position: absolute;
+        margin-top: 320px; 
+    }
 }
